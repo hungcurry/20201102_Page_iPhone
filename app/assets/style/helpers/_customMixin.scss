@@ -1,0 +1,31 @@
+// 水平置中
+@mixin center($direction: row, $wrap: wrap, $main-center:center, $sub-center:center) {
+  display: flex;
+  flex-direction: $direction;
+  flex-wrap: $wrap;
+  justify-content: $main-center;
+  align-items: $sub-center;
+}
+@mixin posCenter() {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50% , -50%);
+}
+// 文字顏色
+@mixin textColor($color) {
+  color: $color;
+}
+// 文字大小／行距
+@mixin fontSize($size , $height) {
+  font-size: $size;
+  line-height: $height;
+}
+// 物件寬高
+@mixin width($width , $height) {
+  width: $width;
+  height: $height;
+}
+
+
+

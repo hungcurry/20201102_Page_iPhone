@@ -1,0 +1,91 @@
+//注意說明
+
+    // <div class="container-fluid bg-white mb-xl-0">
+    //     <div class="row">
+    //       <div class="noticeText">
+    //         <h4 class="h2" title="舉例"><strong>舉例：</strong></h4>
+    //         <div class="col-12">
+    //           <ul class="pl-3">
+    //             <li class="title text-primary font-weight-normal">
+    //               (一)CADR值 200 的機種，空間高度 3m，適用坪數是多少？
+    //             </li>
+    //             <li class="disc">500 (CADR) ÷ 2.8 ÷ 3 × 0.3025 = 18 坪</li>
+    //             <li class="disc">200 ÷ 3 ÷ 5 × 0.3025 = 4 坪</li>
+    //             <li class="disc">200 ÷ 3 ÷ 3 × 0.3025 = 7 坪</li>
+    //             <li class="disc mb-2">比較標準的是用在 4 坪的空間，可以使室內汙染物保持在較低的濃度，若用在 7 坪的空間，相對淨化的強度沒這麼好，但仍在可接受範圍內。</li>
+    //             <li class="title text-primary font-weight-normal">
+    //               (二)室內 15 坪，樓層高度 3 m，要挑多少 CADR 值機種才夠用？
+    //             </li>
+    //             <li class="disc">15 ÷ 0.3025 × 3 × 3 = 446 CADR</li>
+    //           </ul>
+    //           <!-- <p class="border-top"></p> -->
+    //         </div>
+    //       </div>
+    //     </div>
+    //   </div>
+
+/*-------------------------*/
+/* noticeText
+---------------------------*/
+.noticeText{
+  width:100%;
+  max-width: 96rem;
+  background-color: $white;
+  margin: 0 auto;
+  margin-bottom: 6rem; 
+  @media screen and (min-width: $mq768) {
+    // padding-left: 2.4rem;
+    // padding-right: 2.4rem;
+    margin-bottom: 5rem; 
+  }
+  @media screen and (min-width: $mq1024) {
+    padding-left: 0rem;
+    padding-right: 0rem;
+    // margin-bottom: 4.5rem; 
+  }
+  @media screen and (min-width: $mq1200) {
+    max-width: 120rem;
+  }
+  // 說明
+  h4{
+    @include fontSize(2rem , 1.7);
+    font-weight: 400;
+    text-align: left;
+    padding-left: 1rem;
+    margin-bottom: 1rem;
+    @media screen and (min-width: $mq768) {
+      @include fontSize(2.2rem , 3.6rem);
+    }
+    strong{
+      color: $primary;
+      font-weight: 500;
+    }
+  }
+  ul{
+    border-top: 0.5rem solid $bg-thirdly;
+    padding-top: 2rem;
+  }
+  //p上邊框線5
+  p.border-top-5{
+    border-top: 0.5rem solid $bg-thirdly;
+    padding-top: 2rem;
+  }
+  p{
+    color: $black;
+    text-align: left;
+    line-height: 2;
+    @media screen and (min-width: $mq768) {
+    }
+  }
+  span{
+    color: $primary;
+    margin-bottom: 1rem;
+    font-weight: 500;
+    word-break: break-all;
+    @media screen and (min-width: $mq768) {
+    }
+  }
+  a{
+    color: $text-keyword;
+  }
+}

@@ -1,0 +1,306 @@
+/*-------------------------*/
+/* custom utility
+---------------------------*/
+
+// 內陰影文字
+.keyword {
+  color: $black !important;
+  box-shadow: inset 0 -0.9rem 0 $bg-fourthly ;
+}
+.keyword-lg {
+  font-size: 4rem !important;
+  @media screen and (min-width: $mq768) {
+    font-size: 5.5rem !important;
+  }
+}
+// 文案註解
+.supplement{
+  color: $secondary !important;
+  @media screen and (min-width: $mq1200) {
+
+  }
+}
+// 圖片自適應
+.object-img{
+  width:100%;
+  height: 100%;
+  object-fit: cover;
+}
+// --------------------
+// custom字體類
+// --------------------
+
+// 文字隱藏
+.text-hide {
+  font: 0/0 a;
+  color: transparent;
+  text-shadow: none;
+  background-color: transparent;
+  border: 0;
+}
+// 文字換行
+.word-break{
+  word-break: break-all !important;
+}
+// 文字漸層
+// 避免使用letter-spacing 
+.text-gradient{
+  color: #34849e;
+  background: -webkit-linear-gradient( 0deg,#34849e 0,#6db6ca 100%);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent !important;
+}
+// 桌機文字換色
+.text-lg-white{
+  @media screen and (min-width: $mq1200) {
+    color: $white !important;
+  }
+}
+.text-lg-secondary{
+  @media screen and (min-width: $mq1200) {
+    color: $secondary!important;
+  }
+}
+// 字體大小
+.fz-30{
+  @include rfs(3rem !important);
+  font-weight: bold !important;
+  @media screen and (min-width: $mq768) {
+
+  }
+}
+.fz-32{
+  @include rfs(3.2rem !important);
+  font-weight: bold !important;
+  @media screen and (min-width: $mq768) {
+
+  }
+}
+// --------------------
+// custom rounded
+// --------------------
+
+//右半邊圓角
+.picBorder-right{
+  // border-radius: 3rem 3rem 3rem 3rem ;
+  @media screen and (min-width: $mq768) {
+    // border-radius: 10rem 10rem 10rem 10rem ;
+  }
+}
+//左半邊圓角
+.picBorder-left{
+  // border-radius: 3rem 3rem 3rem 3rem ;
+  @media screen and (min-width: $mq768) {
+    // border-radius: 10rem 10rem 10rem 10rem ;
+  }
+}
+//右半邊圓角-2
+.picBorder-right-2{
+  // border-radius: 3rem 3rem 0rem 3rem ;
+  @media screen and (min-width: $mq768) {
+    // border-radius: 10rem 10rem 0rem 10rem ;
+  }
+}
+//左半邊圓角-2
+.picBorder-left-2{
+  // border-radius: 3rem 3rem 3rem 0rem ;
+  @media screen and (min-width: $mq768) {
+    // border-radius: 10rem 10rem 10rem 0rem ;
+  }
+}
+// 圓角
+.rounded-5{
+  border-radius: 0.5rem !important;
+}
+.rounded-30{
+  border-radius: 3rem !important;
+}
+
+// --------------------
+// custom border
+// --------------------
+
+// 線框
+.border-3{
+  border-width: 0.3rem !important;
+}
+.border-5{
+  border-width: 0.5rem !important;
+}
+.border-top-3{
+  border-top: 0.3rem dotted #000 !important;
+}
+.border-right-3{
+  border-right: 0.3rem dotted #000 !important;
+}
+.border-bottom-3{
+  border-bottom: 0.3rem dotted #000 !important;
+}
+.border-left-3{
+  border-left: 0.3rem dotted #000 !important;
+}
+.border-Left-15{
+  @media screen and (min-width: $mq1024) {
+    border-left: 1.5rem solid $primary !important ;
+  }
+}
+
+// --------------------
+// custom ul li
+// --------------------
+
+// ul li 清單樣式
+ul{
+  width: 100%;
+  color: $black;
+  &.specification{
+    color: $secondary;
+  }
+}
+li{
+  line-height: 1.7;
+  color: $black;
+  text-align: left;
+  @media screen and (min-width: $mq768) {
+
+  }
+  &.title{
+    margin-left: -1.5rem;
+  }
+  &.number{
+    list-style: decimal;
+    color: $thirdly;
+  }
+  &.disc{
+    // color: $primary;
+    @media screen and (min-width: $mq1200) {
+      font-size: 1.8rem;
+    }
+  }
+  &.disc2{
+    color: $black;
+    @media screen and (min-width: $mq1200) {
+      font-size: 1.8rem;
+    }
+  }
+}
+li.disc:before{
+  @include width(1rem , 1rem); // 0.4rem 0.4rem
+  position: absolute;
+  top: 1.8rem; // 1.5rem
+  left: -1rem; // -1.5rem
+  border-radius: 50%;
+  display: inline-block;
+  content:"";
+  background-color: $black ;
+  @media screen and (min-width: $mq1200) {
+    // @include width(2rem , 2rem); // 無
+    // top: 1.2rem;  // 無
+    // left: -2.5rem; // 無
+  }
+}
+li.disc2:before{
+  @include width(0.6rem , 0.6rem); // 0.4rem 0.4rem
+  position: absolute;
+  top: 1.5rem; // 1.5rem
+  left: -1.5rem; // -1.5rem
+  border-radius: 50%;
+  display: inline-block;
+  content:"";
+  background-color: $black ;
+  @media screen and (min-width: $mq1200) {
+
+  }
+}
+li.disc.text-lg-secondary:before{
+  @media screen and (min-width: $mq1200) {
+    background-color: $thirdly;
+  }
+}
+// --------------------
+// custom Spacing
+// --------------------
+
+// 正向工具 --padding
+
+.pt-xl-28{
+  @media screen and (min-width: $mq1200) {
+    padding-top: 14rem !important;
+  }
+}
+.pb-xl-21{
+  @media screen and (min-width: $mq1200) {
+    padding-bottom: 10.5rem !important;
+  }
+}
+.pb-xl-30{
+  @media screen and (min-width: $mq1200) {
+    padding-bottom: 15rem !important;
+  }
+}
+.pl-xl-12{
+  @media screen and (min-width: $mq1200) {
+    padding-left: 6rem !important;
+  }
+}
+// 正向工具 --margin
+.mt-xl-27{
+  @media screen and (min-width: $mq1200) {
+    margin-top: 13.5rem !important;
+  }
+}
+.mt-xl-31{
+  @media screen and (min-width: $mq1200) {
+    margin-top: 15.5rem !important;
+  }
+}
+.mb-xl-30{
+  @media screen and (min-width: $mq1200) {
+    margin-bottom: 15rem !important;
+  }
+}
+.mb-xl-40{
+  @media screen and (min-width: $mq1200) {
+    margin-bottom: 20rem !important;
+  }
+}
+// 正向工具 --offset-top
+.top-offset-2{
+  top: 1rem !important;
+}
+.top-offset-6{
+  top: 3rem !important;
+}
+// 正向工具 --offset-padding 百分比
+.pl-offset-1{
+  @media screen and (min-width: $mq1200) {
+    padding-left: 8.3333% !important;
+  }
+}
+.pl-offset-2{
+  @media screen and (min-width: $mq1200) {
+    padding-left: 16.6666% !important;
+  }
+}
+// --------------------------------------------------
+
+// 負向工具 --margin
+.mt-xl-n16{
+  @media screen and (min-width: $mq1200) {
+    margin-top: -8rem !important;
+  }
+}
+.mt-xl-n27{
+  @media screen and (min-width: $mq1200) {
+    margin-top: -13.5rem !important;
+  }
+}
+// 負向工具 --offset-top
+.top-offset-n2{
+  top: -1rem !important;
+}
+.top-offset-n6{
+  top: -3rem !important;
+}
+
